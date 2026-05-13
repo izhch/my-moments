@@ -6,6 +6,10 @@ languageCode = "zh-CN"
 title = "向晚的朋友圈"
 theme = "wechat-moments"
 
+# 自动变成 baseURL/图片路径
+canonifyURLs = true
+relativeURLs = false
+
 # ============================================
 # 个人资料配置
 # ============================================
