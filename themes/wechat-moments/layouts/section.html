@@ -1,0 +1,41 @@
+{{ define "main" }}
+  {{ partial "profile.html" . }}
+
+  <div class="moments-list">
+    {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{- if not $pages }}
+      {{- $pages = .Site.RegularPages }}
+    {{- end }}
+    {{- $pages = $pages.ByDate.Reverse }}
+
+    {{- if gt (len $pages) 0 }}
+      {{- range $pages }}
+        {{- if not .Params.draft }}
+          {{ partial "moment.html" (dict "Page" . "isList" true) }}
+        {{- end }}
+      {{- end }}
+    {{- else }}
+      <div class="empty-state">
+        <div class="empty-icon">
+          <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor" opacity="0.3">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+          </svg>
+        </div>
+        <p>还没有发布任何朋友圈</p>
+      </div>
+    {{- end }}
+  </div>
+
+  {{- /* Pagination */ -}}
+  {{- if .Paginator.HasPrev }}
+  <div class="pagination">
+    {{- if .Paginator.HasPrev }}
+    <a class="pagination-prev" href="{{ .Paginator.Prev.URL }}">上一页</a>
+    {{- end }}
+    <span class="pagination-info">第 {{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }} 页</span>
+    {{- if .Paginator.HasNext }}
+    <a class="pagination-next" href="{{ .Paginator.Next.URL }}">下一页</a>
+    {{- end }}
+  </div>
+  {{- end }}
+{{ end }}

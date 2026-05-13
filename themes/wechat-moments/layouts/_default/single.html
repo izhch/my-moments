@@ -1,0 +1,20 @@
+{{ define "main" }}
+  {{ partial "profile.html" . }}
+
+  <div class="moments-list single-post">
+    {{ partial "moment.html" (dict "Page" . "isList" false) }}
+
+    <div class="post-nav-wrapper">
+      <div class="post-nav">
+        {{- if .PrevInSection }}
+        <a href="{{ .PrevInSection.Permalink }}" class="post-nav-link">上一页</a>
+        {{- else }}
+        <span></span>
+        {{- end }}
+        {{- if .NextInSection }}
+        <a href="{{ .NextInSection.Permalink }}" class="post-nav-link">下一页</a>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+{{ end }}

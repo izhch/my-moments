@@ -1,0 +1,27 @@
+{{ define "main" }}
+  {{ partial "profile.html" . }}
+
+  <div class="moments-list" id="momentsList">
+    {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{- if not $pages }}
+      {{- $pages = .Site.RegularPages }}
+    {{- end }}
+    {{- $pages = $pages.ByDate.Reverse }}
+
+    {{- if gt (len $pages) 0 }}
+      {{- range $pages }}
+        {{- if not .Params.draft }}
+          {{ partial "moment.html" (dict "Page" . "isList" true) }}
+        {{- end }}
+      {{- end }}
+    {{- else }}
+      <div class="empty-state">
+        <p>还没有发布任何朋友圈</p>
+      </div>
+    {{- end }}
+  </div>
+
+  <div class="load-more-indicator" id="loadMoreIndicator">
+    <span class="loading-text">正在加载...</span>
+  </div>
+{{ end }}

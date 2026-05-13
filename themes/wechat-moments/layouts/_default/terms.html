@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <div class="moments-list tags-overview">
+    <div class="tags-header">
+      <h2>标签</h2>
+    </div>
+    <div class="tags-cloud">
+      {{- range .Data.Terms.Alphabetical }}
+      <a href="{{ .Page.Permalink }}" class="tag-cloud-item">
+        #{{ .Page.Title }}
+        <span class="tag-count">{{ .Count }}</span>
+      </a>
+      {{- end }}
+    </div>
+  </div>
+{{ end }}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <div id="app" class="wechat-moments">
+    {{ partial "header.html" . }}
+    <main class="moments-feed">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "lightbox.html" . }}
+    {{ partial "footer.html" . }}
+  </div>
+  {{ partial "scripts.html" . }}
+</body>
+</html>

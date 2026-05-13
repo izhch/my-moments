@@ -1,0 +1,42 @@
+{{- /* 封面区域：封面图片、头像、网站名称、个性签名 */ -}}
+{{- /* 支持亮色/暗色模式封面切换 */ -}}
+{{- $profile := .Site.Params.profile }}
+<section class="profile-header">
+  {{- /* 封面图片（亮色/暗色） */ -}}
+  <div class="profile-cover">
+    {{- if $profile.cover }}
+    <img class="cover-light" src="{{ $profile.cover | relURL }}" alt="封面" loading="eager">
+    {{- else }}
+    <div class="cover-placeholder cover-light"></div>
+    {{- end }}
+    {{- if $profile.cover_dark }}
+    <img class="cover-dark" src="{{ $profile.cover_dark | relURL }}" alt="封面" loading="eager">
+    {{- else if $profile.cover }}
+    <img class="cover-dark" src="{{ $profile.cover | relURL }}" alt="封面" loading="eager">
+    {{- else }}
+    <div class="cover-placeholder cover-dark"></div>
+    {{- end }}
+  </div>
+
+  {{- /* 网站名称 + 头像 - 右下角覆盖在封面上 */ -}}
+  <div class="profile-info">
+    {{- /* 封面显示网站名称（sitename），如果没有则显示昵称 */ -}}
+    <a href="{{ .Site.BaseURL }}" class="profile-nickname">{{ $profile.sitename | default ($profile.nickname | default "微信用户") }}</a>
+    <div class="profile-avatar-wrap">
+      {{- if $profile.avatar }}
+      <img class="profile-avatar" src="{{ $profile.avatar | relURL }}" alt="{{ $profile.nickname }}">
+      {{- else }}
+      <div class="profile-avatar avatar-placeholder">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor">
+          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+        </svg>
+      </div>
+      {{- end }}
+    </div>
+  </div>
+
+  {{- /* 个性签名 - 右对齐 */ -}}
+  {{- if $profile.signature }}
+  <div class="profile-signature">{{ $profile.signature }}</div>
+  {{- end }}
+</section>

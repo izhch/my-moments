@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <div class="moments-list tag-list">
+    <div class="tag-header">
+      <h2 class="tag-title">{{ .Title }}</h2>
+      <p class="tag-count">共 {{ len .Pages }} 条动态</p>
+    </div>
+
+    {{- range .Pages.ByDate.Reverse }}
+      {{ partial "moment.html" (dict "Page" . "isList" true) }}
+    {{- end }}
+
+    {{- if eq (len .Pages) 0 }}
+    <div class="empty-state">
+      <p>该分类下还没有动态</p>
+    </div>
+    {{- end }}
+  </div>
+{{ end }}

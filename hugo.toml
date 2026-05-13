@@ -1,0 +1,29 @@
+# ============================================
+# 网站基础配置
+# ============================================
+baseURL = "https://izhch.github.io/my-moments/"  # GitHub Pages 地址
+languageCode = "zh-CN"
+title = "向晚的朋友圈"
+theme = "wechat-moments"
+
+# ============================================
+# 个人资料配置
+# ============================================
+[params]
+  showTitle = false  # 是否显示文章标题
+
+  [params.profile]
+    sitename = "向晚朋友圈"      # 封面显示的网站名称
+    nickname = "向晚"            # 文章列表显示的昵称
+    signature = "没有什么感同身受，只有冷暖自知"
+    avatar = "/avatar/avatar.jpeg"
+    cover = "/banner/cover1.webp"
+    cover_dark = "/banner/cover11.webp"  # 暗色模式封面（可选）
+
+# ============================================
+# Markdown 设置
+# ============================================
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # 允许 HTML
