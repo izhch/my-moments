@@ -16,9 +16,9 @@ theme = "wechat-moments"
     sitename = "向晚朋友圈"      # 封面显示的网站名称
     nickname = "向晚"            # 文章列表显示的昵称
     signature = "没有什么感同身受，只有冷暖自知"
-    avatar = "/avatar/avatar.jpeg"
-    cover = "/banner/cover1.webp"
-    cover_dark = "/banner/cover11.webp"  # 暗色模式封面（可选）
+    avatar = "avatar/avatar.jpeg"
+    cover = "banner/cover1.webp"
+    cover_dark = "banner/cover11.webp"  # 暗色模式封面（可选）
 
 # ============================================
 # Markdown 设置
