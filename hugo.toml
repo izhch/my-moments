@@ -1,7 +1,7 @@
 # ============================================
 # 网站基础配置
 # ============================================
-baseURL = "https://izhch.github.io/my-moments/"  # GitHub Pages 地址
+baseURL = "https://my-moments.pages.dev/"  # GitHub Pages 地址
 languageCode = "zh-CN"
 title = "向晚的朋友圈"
 theme = "wechat-moments"
