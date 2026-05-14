@@ -157,17 +157,17 @@ button { border: none; background: none; cursor: pointer; color: inherit; font-f
 
 /* === 10. 图片九宫格 === */
 .moment-images { display: grid; gap: 4px; margin-bottom: 8px; }
-/* 1张图片：单列，最大宽度270px */
-.image-count-1 { grid-template-columns: 1fr; max-width: 270px; }
+/* 1张图片：单列，宽度66.67%（约2/3） */
+.image-count-1 { grid-template-columns: 1fr; width: 66.67%; }
 .image-count-1 .image-item::before { display: none; }
 .image-count-1 .image-item a { position: relative; }
 .image-count-1 .image-item img { position: relative; width: 100%; height: auto; aspect-ratio: auto; max-height: 400px; object-fit: cover; }
-/* 2张图片：两列 */
-.image-count-2 { grid-template-columns: repeat(2, 1fr); max-width: 270px; }
-/* 4张图片：两列两行 */
-.image-count-4 { grid-template-columns: repeat(2, 1fr); max-width: 270px; }
-/* 3-9张图片：三列 */
-.image-count-3, .image-count-5, .image-count-6, .image-count-7, .image-count-8, .image-count-9 { grid-template-columns: repeat(3, 1fr); max-width: 449px; }
+/* 2张图片：两列，宽度66.67% */
+.image-count-2 { grid-template-columns: repeat(2, 1fr); width: 66.67%; }
+/* 4张图片：两列两行，宽度66.67% */
+.image-count-4 { grid-template-columns: repeat(2, 1fr); width: 66.67%; }
+/* 3/5/6/7/8/9张图片：三列，宽度自适应（减去头像偏移） */
+.image-count-3, .image-count-5, .image-count-6, .image-count-7, .image-count-8, .image-count-9 { grid-template-columns: repeat(3, 1fr); width: calc(100% - 46px); }
 /* 单个图片项 */
 .image-item { position: relative; overflow: hidden; cursor: pointer; background-color: var(--bg-tertiary); }
 .image-item::before { content: ''; display: block; padding-bottom: 100%; }  /* 正方形比例 */
@@ -285,9 +285,9 @@ button { border: none; background: none; cursor: pointer; color: inherit; font-f
   .profile-avatar { width: 50px; height: 50px; }
   .profile-nickname { font-size: 15px; }
   .profile-info { margin-top: -35px; padding: 0 12px 12px; gap: 8px; }
-  .image-count-1 { max-width: 200px; }
-  .image-count-2 { max-width: 200px; }
-  .image-count-3, .image-count-5, .image-count-6, .image-count-7, .image-count-8, .image-count-9 { max-width: 100%; }
+  /* 移动端图片宽度调整 */
+  .image-count-1, .image-count-2, .image-count-4 { width: 75%; }
+  .image-count-3, .image-count-5, .image-count-6, .image-count-7, .image-count-8, .image-count-9 { width: 100%; }
   .lightbox-prev { left: 4px; }
   .lightbox-next { right: 4px; }
 }
