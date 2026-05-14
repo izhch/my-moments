@@ -229,7 +229,7 @@ button { border: none; background: none; cursor: pointer; color: inherit; font-f
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
-  height: 14px;  /* 短线高度 */
+  height: 18px;  /* 短线高度 */
   background-color: rgba(255,255,255,0.2);
 }
 .action-menu-item:hover { background-color: rgba(255,255,255,0.1); }
