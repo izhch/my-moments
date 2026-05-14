@@ -164,6 +164,8 @@ button { border: none; background: none; cursor: pointer; color: inherit; font-f
 .image-count-1 .image-item img { position: relative; width: 100%; height: auto; aspect-ratio: auto; max-height: 400px; object-fit: cover; }
 /* 2张图片：两列 */
 .image-count-2 { grid-template-columns: repeat(2, 1fr); max-width: 270px; }
+/* 4张图片：两列两行 */
+.image-count-4 { grid-template-columns: repeat(2, 1fr); max-width: 270px; }
 /* 3-9张图片：三列 */
 .image-count-3, .image-count-5, .image-count-6, .image-count-7, .image-count-8, .image-count-9 { grid-template-columns: repeat(3, 1fr); max-width: 449px; }
 /* 单个图片项 */
