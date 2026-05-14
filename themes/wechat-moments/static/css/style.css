@@ -249,30 +249,6 @@ button { border: none; background: none; cursor: pointer; color: inherit; font-f
 .post-nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-top: 0.5px solid var(--border-color); }
 .post-nav-link { font-size: 14px; color: var(--wc-blue); }
 
-/* === 16.5 密码验证框 === */
-/* 遮罩层 */
-.password-overlay { background-color: var(--card-bg); padding: 40px 20px; display: flex; align-items: center; justify-content: center; }
-/* 密码框容器 */
-.password-box { text-align: center; max-width: 280px; }
-/* 锁图标 */
-.password-icon { font-size: 48px; margin-bottom: 16px; }
-/* 标题 */
-.password-title { font-size: 18px; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; }
-/* 描述文字 */
-.password-desc { font-size: 14px; color: var(--text-tertiary); margin-bottom: 24px; }
-/* 输入框和按钮容器 */
-.password-input-wrap { display: flex; gap: 8px; margin-bottom: 12px; }
-/* 密码输入框 */
-.password-input { flex: 1; padding: 10px 14px; font-size: 14px; border: 1px solid var(--border-color); border-radius: 6px; background-color: var(--bg-secondary); color: var(--text-primary); outline: none; }
-.password-input:focus { border-color: var(--wc-blue); }
-/* 确定按钮 */
-.password-btn { padding: 10px 20px; font-size: 14px; color: #fff; background-color: var(--wc-blue); border: none; border-radius: 6px; cursor: pointer; }
-.password-btn:hover { opacity: 0.9; }
-/* 错误提示 */
-.password-error { font-size: 13px; color: #ff6b6b; }
-/* 加密内容区域 */
-.encrypted-content { padding: 16px; }
-
 /* === 17. 分页 === */
 .pagination { display: flex; align-items: center; justify-content: center; gap: 16px; padding: 20px 16px; background-color: var(--bg-secondary); }
 .pagination-prev, .pagination-next { font-size: 14px; color: var(--wc-blue); padding: 6px 16px; border-radius: 16px; background-color: var(--bg-tertiary); }
