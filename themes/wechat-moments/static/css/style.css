@@ -76,7 +76,7 @@ button { border: none; background: none; cursor: pointer; color: inherit; font-f
   z-index: 100;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: 8px;
   background-color: var(--card-bg);
   color: var(--text-primary);
   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
@@ -287,7 +287,7 @@ button { border: none; background: none; cursor: pointer; color: inherit; font-f
   .profile-info { margin-top: -35px; padding: 0 12px 12px; gap: 8px; }
   /* 移动端图片宽度调整 */
   .image-count-1, .image-count-2, .image-count-4 { width: 75%; }
-  .image-count-3, .image-count-5, .image-count-6, .image-count-7, .image-count-8, .image-count-9 { width: 100%; }
+  .image-count-3, .image-count-5, .image-count-6, .image-count-7, .image-count-8, .image-count-9 { width: calc(100% - 46px); }
   .lightbox-prev { left: 4px; }
   .lightbox-next { right: 4px; }
 }
