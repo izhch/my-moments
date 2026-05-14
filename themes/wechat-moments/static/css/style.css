@@ -209,7 +209,7 @@ button { border: none; background: none; cursor: pointer; color: inherit; font-f
 .moment-video video { width: 100%; max-height: 300px; border-radius: 4px; background-color: #000; }
 
 /* === 14. 底部信息栏（位置、时间、操作按钮） === */
-.moment-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; margin-bottom: 5px; position: relative; }
+.moment-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; margin-bottom: 3px; position: relative; }
 .moment-meta-left { display: flex; align-items: center; gap: 8px; }
 /* 操作按钮区域，绝对定位在右上角 */
 .moment-actions { display: flex; align-items: center; position: absolute; right: 0; top: 0; }
