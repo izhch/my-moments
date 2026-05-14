@@ -220,7 +220,7 @@ button { border: none; background: none; cursor: pointer; color: inherit; font-f
 /* 弹出菜单（赞/评论），在按钮左边垂直居中 */
 .action-menu-popup { display: none; position: absolute; right: 100%; top: 50%; transform: translateY(-50%); margin-right: 8px; background-color: #4a4a4a; border-radius: 6px; overflow: hidden; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.3); }
 .action-menu-popup.show { display: flex; }  /* 显示时横向排列 */
-.action-menu-item { display: flex; align-items: center; gap: 6px; padding: 10px 16px; font-size: 14px; color: #fff; transition: background-color 0.2s; white-space: nowrap; position: relative; }
+.action-menu-item { display: flex; align-items: center; gap: 6px; padding: 10px 16px; font-size: 16px; color: #fff; transition: background-color 0.2s; white-space: nowrap; position: relative; }
 /* 赞和评论中间的分割线，短一点只显示中间 */
 .action-menu-item:first-child::after {
   content: '';
