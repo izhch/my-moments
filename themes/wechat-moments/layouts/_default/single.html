@@ -4,40 +4,6 @@
   <div class="moments-list single-post">
     {{ partial "moment.html" (dict "Page" . "isList" false) }}
 
-    {{- /* 如果文章设置了密码 */ -}}
-    {{- if .Params.password }}
-    <div class="post-nav-wrapper">
-      <div class="password-overlay" id="passwordOverlay">
-        <div class="password-box">
-          <div class="password-icon">🔒</div>
-          <div class="password-title">此文章已加密</div>
-          <div class="password-desc">输入密码查看内容</div>
-          <div class="password-input-wrap">
-            <input type="password" id="passwordInput" class="password-input" placeholder="请输入密码">
-            <button class="password-btn" id="passwordBtn">确定</button>
-          </div>
-          <div class="password-error" id="passwordError" style="display: none;">密码错误，请重试</div>
-        </div>
-      </div>
-
-      {{- /* 加密的文章内容，初始隐藏 */ -}}
-      <div class="encrypted-content" id="encryptedContent" style="display: none;">
-        {{ .Content }}
-      </div>
-    </div>
-    {{- else }}
-    {{- /* 正常文章内容 */ -}}
-    <div class="post-nav-wrapper">
-      <div class="moment-card">
-        <div class="moment-inner">
-          <div class="moment-content">
-            {{ .Content }}
-          </div>
-        </div>
-      </div>
-    </div>
-    {{- end }}
-
     <div class="post-nav-wrapper">
       <div class="post-nav">
         {{- if .PrevInSection }}
@@ -51,50 +17,4 @@
       </div>
     </div>
   </div>
-
-  {{- /* 密码验证 JS */ -}}
-  {{- if .Params.password }}
-  <script>
-    (function() {
-      var correctPassword = '{{ .Params.password }}';
-      var storageKey = 'pwd_' + window.location.pathname;
-      var overlay = document.getElementById('passwordOverlay');
-      var content = document.getElementById('encryptedContent');
-      var input = document.getElementById('passwordInput');
-      var btn = document.getElementById('passwordBtn');
-      var error = document.getElementById('passwordError');
-
-      // 检查本地存储是否已验证过
-      if (localStorage.getItem(storageKey) === correctPassword) {
-        overlay.style.display = 'none';
-        content.style.display = 'block';
-      }
-
-      // 验证密码
-      function checkPassword() {
-        var pwd = input.value;
-        if (pwd === correctPassword) {
-          localStorage.setItem(storageKey, pwd);
-          overlay.style.display = 'none';
-          content.style.display = 'block';
-          error.style.display = 'none';
-        } else {
-          error.style.display = 'block';
-          input.value = '';
-          input.focus();
-        }
-      }
-
-      // 点击确定按钮
-      btn.addEventListener('click', checkPassword);
-
-      // 回车键提交
-      input.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-          checkPassword();
-        }
-      });
-    })();
-  </script>
-  {{- end }}
 {{ end }}
