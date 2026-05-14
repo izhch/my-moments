@@ -6,42 +6,42 @@
 /* === 1. CSS变量定义 === */
 /* 亮色模式颜色 */
 :root {
-  --wc-green: #07C160;          /* 微信绿 */
-  --wc-blue: #576B95;           /* 链接蓝 */
-  --bg-primary: #EDEDED;        /* 主背景灰 */
-  --bg-secondary: #FFFFFF;      /* 卡片白 */
-  --bg-tertiary: #F7F7F7;       /* 次级灰 */
-  --bg-hover: #F0F0F0;          /* 悬停灰 */
-  --text-primary: #191919;      /* 主文字黑 */
-  --text-secondary: #666666;    /* 次级文字灰 */
-  --text-tertiary: #999999;     /* 时间/占位文字 */
-  --text-link: #576B95;         /* 链接色 */
-  --border-color: #E5E5E5;      /* 分割线色 */
-  --shadow-medium: rgba(0, 0, 0, 0.1);  /* 中等阴影 */
-  --overlay-bg: rgba(0, 0, 0, 0.7);     /* 遮罩层背景 */
-  --nav-bg: #EDEDED;            /* 导航背景 */
-  --card-bg: #FFFFFF;           /* 卡片背景 */
-  --music-bg: #F7F7F7;          /* 音乐卡片背景 */
-  --link-card-bg: #F7F7F7;      /* 链接卡片背景 */
+  --wc-green: #07C160;          /* 微信绿（点赞按钮、选中状态） */
+  --wc-blue: #576B95;           /* 链接蓝（昵称、链接文字） */
+  --bg-primary: #EDEDED;        /* 页面主背景（灰色） */
+  --bg-secondary: #FFFFFF;      /* 个性签名区域背景（白色） */
+  --bg-tertiary: #F7F7F7;       /* ..按钮背景、音乐/链接卡片（浅灰） */
+  --bg-hover: #F0F0F0;          /* 悬停背景色（按钮悬停） */
+  --text-primary: #191919;      /* 主文字（昵称、正文） */
+  --text-secondary: #666666;    /* 次级文字（位置、标签） */
+  --text-tertiary: #999999;     /* 时间、占位文字（浅灰） */
+  --text-link: #576B95;         /* 链接颜色（同昵称蓝） */
+  --border-color: #E5E5E5;      /* 分割线、边框（极浅灰） */
+  --shadow-medium: rgba(0, 0, 0, 0.1);   /* 阴影（轻微黑色） */
+  --overlay-bg: rgba(0, 0, 0, 0.7);      /* 图片灯箱遮罩层（半透明黑） */
+  --nav-bg: #EDEDED;            /* 导航栏背景（同页面背景） */
+  --card-bg: #FFFFFF;           /* 文章卡片背景、封面区域背景（白色） */
+  --music-bg: #F7F7F7;          /* 音乐播放器背景（浅灰） */
+  --link-card-bg: #F7F7F7;      /* 链接分享卡片背景（浅灰） */
 }
 
 /* 暗色模式颜色 */
 [data-theme="dark"] {
-  --bg-primary: #6b6b6b;
-  --bg-secondary: #3d3d3d;
-  --bg-tertiary: #3d3d3d;
-  --bg-hover: #8b8b8b;
-  --text-primary: #E0E0E0;
-  --text-secondary: #b0b0b0;
-  --text-tertiary: #909090;
-  --text-link: #7B9FD4;
-  --border-color: #8b8b8b;
-  --shadow-medium: rgba(0, 0, 0, 0.4);
-  --overlay-bg: rgba(0, 0, 0, 0.85);
-  --nav-bg: #7b7b7b;
-  --card-bg: #2c2c2c;
-  --music-bg: #8b8b8b;
-  --link-card-bg: #8b8b8b;
+  --bg-primary: #6b6b6b;        /* 页面主背景 */
+  --bg-secondary: #3d3d3d;      /* 个性签名区域背景 */
+  --bg-tertiary: #3d3d3d;       /* ..按钮背景、音乐/链接卡片 */
+  --bg-hover: #8b8b8b;          /* 悬停背景色 */
+  --text-primary: #E0E0E0;      /* 主文字（昵称、正文） */
+  --text-secondary: #b0b0b0;    /* 次级文字（位置、标签） */
+  --text-tertiary: #909090;     /* 时间、占位文字 */
+  --text-link: #7B9FD4;         /* 链接颜色（比亮色模式更亮） */
+  --border-color: #8b8b8b;      /* 分割线、边框 */
+  --shadow-medium: rgba(0, 0, 0, 0.4);   /* 阴影（比亮色更深） */
+  --overlay-bg: rgba(0, 0, 0, 0.85);     /* 图片灯箱遮罩层 */
+  --nav-bg: #7b7b7b;            /* 导航栏背景 */
+  --card-bg: #2c2c2c;           /* 文章卡片背景、封面区域背景 */
+  --music-bg: #8b8b8b;          /* 音乐播放器背景 */
+  --link-card-bg: #8b8b8b;      /* 链接分享卡片背景 */
 }
 
 /* === 2. 重置与基础样式 === */
