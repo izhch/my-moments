@@ -28,7 +28,7 @@
 /* 暗色模式颜色 */
 [data-theme="dark"] {
   --bg-primary: #6b6b6b;
-  --bg-secondary: #7b7b7b;
+  --bg-secondary: #2c2c2c;
   --bg-tertiary: #8b8b8b;
   --bg-hover: #8b8b8b;
   --text-primary: #E0E0E0;
