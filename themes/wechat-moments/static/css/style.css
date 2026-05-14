@@ -28,7 +28,7 @@
 /* 暗色模式颜色 */
 [data-theme="dark"] {
   --bg-primary: #6b6b6b;
-  --bg-secondary: #2c2c2c;
+  --bg-secondary: #7b7b7b;
   --bg-tertiary: #3d3d3d;
   --bg-hover: #8b8b8b;
   --text-primary: #E0E0E0;
@@ -39,7 +39,7 @@
   --shadow-medium: rgba(0, 0, 0, 0.4);
   --overlay-bg: rgba(0, 0, 0, 0.85);
   --nav-bg: #7b7b7b;
-  --card-bg: #7b7b7b;
+  --card-bg: #2c2c2c;
   --music-bg: #8b8b8b;
   --link-card-bg: #8b8b8b;
 }
