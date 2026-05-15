@@ -23,6 +23,7 @@
   --card-bg: #FFFFFF;           /* 文章卡片背景、封面区域背景（白色） */
   --music-bg: #F7F7F7;          /* 音乐播放器背景（浅灰） */
   --link-card-bg: #F7F7F7;      /* 链接分享卡片背景（浅灰） */
+  --action-menu-bg: #4b5153;    /* 赞/评论菜单背景（深灰） */
 }
 
 /* 暗色模式颜色 */
@@ -42,6 +43,7 @@
   --card-bg: #2c2c2c;           /* 文章卡片背景、封面区域背景 */
   --music-bg: #8b8b8b;          /* 音乐播放器背景 */
   --link-card-bg: #8b8b8b;      /* 链接分享卡片背景 */
+  --action-menu-bg: #606060;    /* 赞/评论菜单背景（中灰） */
 }
 
 /* === 2. 重置与基础样式 === */
@@ -208,7 +210,7 @@ button { border: none; background: none; cursor: pointer; color: inherit; font-f
 
 /* === 13. 视频 === */
 .moment-video { margin-bottom: 8px; border-radius: 4px; overflow: hidden; }
-.moment-video video { width: 100%; height: auto; border-radius: 4px; background-color: #000; }
+.moment-video video { width: 100%; max-height: 400px; height: auto; border-radius: 4px; background-color: #000; object-fit: contain; }
 
 /* === 14. 底部信息栏（位置、时间、操作按钮） === */
 .moment-meta { display: flex; align-items: center; justify-content: space-between; margin-top: 15px; margin-bottom: 1px; position: relative; }
@@ -220,7 +222,7 @@ button { border: none; background: none; cursor: pointer; color: inherit; font-f
 .action-expand { display: flex; align-items: center; justify-content: center; width: 30px; height: 20px; color: #576b95; background-color: var(--bg-tertiary); border-radius: 4px; transition: background-color 0.2s; }
 .action-expand:hover { background-color: var(--bg-hover); }
 /* 弹出菜单（赞/评论），在按钮左边垂直居中 */
-.action-menu-popup { display: none; position: absolute; right: 100%; top: 50%; transform: translateY(-50%); margin-right: 8px; background-color: #4a4a4a; border-radius: 6px; overflow: hidden; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.3); }
+.action-menu-popup { display: none; position: absolute; right: 100%; top: 50%; transform: translateY(-50%); margin-right: 8px; background-color: var(--action-menu-bg); border-radius: 6px; overflow: hidden; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.3); }
 .action-menu-popup.show { display: flex; }  /* 显示时横向排列 */
 .action-menu-item { display: flex; align-items: center; gap: 6px; padding: 10px 16px; font-size: 16px; color: #fff; transition: background-color 0.2s; white-space: nowrap; position: relative; }
 /* 赞和评论中间的分割线，短一点只显示中间 */
