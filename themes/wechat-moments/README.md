@@ -155,7 +155,7 @@ hugo-theme-wechat-moments/
     ├── css/style.css       # 样式表
     └── js/main.js          # JavaScript脚本
 ```
-
+https://my-moments.pages.dev/posts/2026-05-15-first/ #文章内页
 ## 部署
 
 ```bash
