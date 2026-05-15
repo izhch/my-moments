@@ -132,13 +132,6 @@
         </div>
       </div>
 
-      {{- if and $Page.Params.tags (not $isList) }}
-      <div class="moment-tags">
-        {{- range $Page.Params.tags }}
-        <span class="post-tag">#{{ . | safeHTML }}</span>
-        {{- end }}
-      </div>
-      {{- end }}
     </div>
   </div>
 </article>
