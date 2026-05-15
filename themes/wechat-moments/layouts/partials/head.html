@@ -6,8 +6,8 @@
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
 
 {{- /* Favicon */ -}}
-{{- if .Site.Params.profile.avatar }}
-<link rel="icon" href="{{ .Site.Params.profile.avatar | relURL }}">
+{{- if .Site.Params.favicon }}
+<link rel="icon" href="{{ .Site.Params.favicon | relURL }}">
 {{- end }}
 
 {{- /* Preconnect for performance */ -}}
