@@ -46,6 +46,15 @@
   --action-menu-bg: #606060;    /* 赞/评论菜单背景（中灰） */
 }
 
+/* ===背景样式 === */
+body {
+  background-image: url('/images/bg.svg');
+  background-size: cover;        /* 铺满整个屏幕 */
+  background-position: center;   /* 居中 */
+  background-repeat: no-repeat;  /* 不重复 */
+  background-attachment: fixed;  /* 固定背景，不随滚动 */
+}
+
 /* === 2. 重置与基础样式 === */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { font-size: 16px; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
