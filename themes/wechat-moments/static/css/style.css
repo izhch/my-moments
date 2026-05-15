@@ -50,7 +50,7 @@
 body {
   background-image: url('/images/bg.svg');
   background-size: cover;        /* 铺满整个屏幕 */
-  background-position: center;   /* 居中 */
+  background-position: center center;   /* 居中 */
   background-repeat: no-repeat;  /* 不重复 */
   background-attachment: fixed;  /* 固定背景，不随滚动 */
 }
