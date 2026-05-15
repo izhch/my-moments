@@ -242,9 +242,6 @@ button { border: none; background: none; cursor: pointer; color: inherit; font-f
 .moment-location { display: flex; align-items: center; gap: 3px; font-size: 14px; color: var(--wc-blue); }
 .moment-time { font-size: 14px; color: var(--text-tertiary); }
 
-/* === 15. 标签 === */
-
-
 /* === 16. 文章内页导航（上一篇/下一篇） === */
 .post-nav-wrapper { background-color: var(--card-bg); padding: 0 16px; }
 .post-nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-top: 0.5px solid var(--border-color); }
