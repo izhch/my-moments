@@ -22,26 +22,26 @@
 
     <div class="moment-content">
       <div class="moment-nickname">
-        <span>{{ $profile.nickname | default "微信用户" }}</span>
+        <span>{{ $profile.nickname | default "微信用户" | safeHTML }}</span>
       </div>
 
       {{- /* 根据配置决定是否显示标题 */ -}}
       {{- if and $showTitle $Page.Title (ne $Page.Title "") }}
       <div class="moment-text">
-        <a href="{{ $Page.Permalink }}">{{ $Page.Title }}</a>
+        <a href="{{ $Page.Permalink }}">{{ $Page.Title | safeHTML }}</a>
       </div>
       {{- end }}
 
       {{- $content := $Page.Plain -}}
       {{- if and $content (gt (len $content) 0) }}
-      <div class="moment-text">{{ $Page.Plain }}</div>
+      <div class="moment-text">{{ $Page.Plain | safeHTML }}</div>
       {{- end }}
 
       {{- if $Page.Params.link }}
       <a class="moment-link-card" href="{{ $Page.Params.link }}" target="_blank" rel="noopener noreferrer">
         <div class="link-card-body">
           <div class="link-card-info">
-            <div class="link-card-title">{{ $Page.Params.linkTitle | default $Page.Params.link }}</div>
+            <div class="link-card-title">{{ $Page.Params.linkTitle | default $Page.Params.link | safeHTML }}</div>
           </div>
           {{- if $Page.Params.linkImage }}
           <div class="link-card-thumb">
@@ -73,8 +73,8 @@
         </div>
         <div class="music-gradient-right">
           <div class="music-info">
-            <div class="music-title">{{ $Page.Params.music.title }}</div>
-            <div class="music-artist">{{ $Page.Params.music.artist }}</div>
+            <div class="music-title">{{ $Page.Params.music.title | safeHTML }}</div>
+            <div class="music-artist">{{ $Page.Params.music.artist | safeHTML }}</div>
           </div>
           <button class="music-play-btn" aria-label="播放">
             <svg class="icon-play" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -102,7 +102,7 @@
       <div class="moment-meta">
         <div class="moment-meta-left">
           {{- if $Page.Params.location }}
-          <span class="moment-location">{{ $Page.Params.location }}</span>
+          <span class="moment-location">{{ $Page.Params.location | safeHTML }}</span>
           {{- end }}
           <time class="moment-time" datetime="{{ $Page.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $Page.Date.Format "2006-01-02T15:04:05Z07:00" }}</time>
         </div>
@@ -135,7 +135,7 @@
       {{- if and $Page.Params.tags (not $isList) }}
       <div class="moment-tags">
         {{- range $Page.Params.tags }}
-        <span class="post-tag">#{{ . }}</span>
+        <span class="post-tag">#{{ . | safeHTML }}</span>
         {{- end }}
       </div>
       {{- end }}
