@@ -36,9 +36,7 @@
   </div>
 
   {{- /* 个性签名 - 右对齐，支持一言API */ -}}
-  <div class="profile-signature" id="hitokoto">
-    {{- if $profile.signature }}{{ $profile.signature }}{{- else }}加载中...{{- end }}
-  </div>
+  <div class="profile-signature" id="hitokoto"></div>
   <script>
     (function() {
       fetch('https://v1.hitokoto.cn/')
