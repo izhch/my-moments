@@ -35,8 +35,20 @@
     </div>
   </div>
 
-  {{- /* 个性签名 - 右对齐 */ -}}
-  {{- if $profile.signature }}
-  <div class="profile-signature">{{ $profile.signature }}</div>
-  {{- end }}
+  {{- /* 个性签名 - 右对齐，支持一言API */ -}}
+  <div class="profile-signature" id="hitokoto">
+    {{- if $profile.signature }}{{ $profile.signature }}{{- else }}加载中...{{- end }}
+  </div>
+  <script>
+    (function() {
+      fetch('https://v1.hitokoto.cn/')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('hitokoto').textContent = data.hitokoto;
+        })
+        .catch(() => {
+          document.getElementById('hitokoto').textContent = '{{ $profile.signature | default "一言加载失败" }}';
+        });
+    })();
+  </script>
 </section>
