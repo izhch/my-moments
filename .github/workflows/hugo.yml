@@ -23,7 +23,7 @@ concurrency:
 
 env:
   # Hugo 版本（根据你安装的版本修改）
-  HUGO_VERSION: '0.161.1'
+  HUGO_VERSION: 'latest'
 
 jobs:
   # 构建任务
