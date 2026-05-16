@@ -5,6 +5,7 @@ baseURL = "https://my-moments.pages.dev/"  # GitHub Pages 地址
 languageCode = "zh-CN"
 title = "向晚的朋友圈"
 theme = "wechat-moments"
+minify = true
 
 # 自动变成 baseURL/图片路径
 canonifyURLs = true
