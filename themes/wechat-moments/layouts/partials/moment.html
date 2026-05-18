@@ -34,7 +34,7 @@
 
       {{- $content := $Page.Plain -}}
       {{- if and $content (gt (len $content) 0) }}
-      <div class="moment-text">{{ $Page.Plain | htmlEscape | replaceRE "\n" "<br>" | safeHTML }}</div>
+      <div class="moment-text">{{ $content | replaceRE "\n" "<br>" | safeHTML }}</div>
       {{- end }}
 
       {{- if $Page.Params.link }}
